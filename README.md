@@ -95,3 +95,11 @@ requirements.txt             Python 依赖
 ```
 
 项目重点是**可核查的增量消费分析与审慎决策**：原始数据可追溯、方案与结论分开冻结、零消费客户保留在分母、探索性异质性不冒充确定投放规律、成本情景不冒充真实经营结果。
+
+## 补充：消费增长的描述性拆解
+
+阅读 [2008 年获奖论文](https://www.stochasticsolutions.com/pdf/HillstromChallenge.pdf)后新增了[独立补充分析](docs/posthoc_analysis_report.md)。全样本核验 `人均消费=访问率×访问后购买率×购买者均消费`，并以 Shapley 对称会计分解解释总差结构。男装相对无邮件的三项会计贡献为 **+$0.5336、+$0.2404、-$0.0043**，女装为 **+$0.2997、+$0.0675、+$0.0572**。访问后购买和购买者均消费都由实验后行为筛选，不能据此识别独立的因果机制。[消费结构图](figures/spend_decomposition.png)与[论文对照](docs/reference_comparison.md)保留实际数值及原文差异；没有实现获奖论文的 Uplift 模型。
+
+## 补充：历史消费与购买间隔的事后探索
+
+仅在固定 **44,800 条探索集**新增 history 三层与 recency 四层分析。两项 OLS+HC3 联合交互检验的 Holm p 分别为 **0.021106** 和 **0.719379**：历史消费有探索线索，但稀少购买与宽区间不足以确立定向规则。该分析是在阅读论文后确定，区别于原四阶段已固定的问题与结果；没有利用验证集挑选新规则，没有改变第三阶段原四特征的检验、冻结的 null 规则或第四阶段结论。运行 `./run_posthoc_analysis.ps1` 可重建 `data/posthoc_results.json`、[历史消费图](figures/history_effects.png)、[recency 图](figures/recency_effects.png)并执行测试；[新增分组方案](docs/posthoc_analysis_plan.md)单独保存。
