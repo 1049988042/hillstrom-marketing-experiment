@@ -1,0 +1,23 @@
+# Raw source data: redistribution rights have not been verified.
+/data/raw/
+
+# Local environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary and private material
+*.tmp
+*.temp
+*.log
+.env
+.env.*
+*.key
+*.pem
+secrets/
+private/

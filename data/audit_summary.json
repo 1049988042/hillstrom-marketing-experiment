@@ -1,0 +1,130 @@
+{
+  "source_file": "Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv",
+  "bytes": 3964977,
+  "sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+  "rows": 64000,
+  "columns": 12,
+  "dtypes": {
+    "recency": "int64",
+    "history_segment": "object",
+    "history": "float64",
+    "mens": "int64",
+    "womens": "int64",
+    "zip_code": "object",
+    "newbie": "int64",
+    "channel": "object",
+    "segment": "object",
+    "visit": "int64",
+    "conversion": "int64",
+    "spend": "float64"
+  },
+  "missing": {
+    "recency": 0,
+    "history_segment": 0,
+    "history": 0,
+    "mens": 0,
+    "womens": 0,
+    "zip_code": 0,
+    "newbie": 0,
+    "channel": 0,
+    "segment": 0,
+    "visit": 0,
+    "conversion": 0,
+    "spend": 0
+  },
+  "full_row_duplicates": 6562,
+  "groups": {
+    "Womens E-Mail": {
+      "count": 21387,
+      "percent": 33.4172
+    },
+    "Mens E-Mail": {
+      "count": 21307,
+      "percent": 33.2922
+    },
+    "No E-Mail": {
+      "count": 21306,
+      "percent": 33.2906
+    }
+  },
+  "values": {
+    "history_segment": {
+      "1) $0 - $100": 22970,
+      "2) $100 - $200": 14254,
+      "3) $200 - $350": 12289,
+      "4) $350 - $500": 6409,
+      "5) $500 - $750": 4911,
+      "6) $750 - $1,000": 1859,
+      "7) $1,000 +": 1308
+    },
+    "zip_code": {
+      "Surburban": 28776,
+      "Urban": 25661,
+      "Rural": 9563
+    },
+    "channel": {
+      "Web": 28217,
+      "Phone": 28021,
+      "Multichannel": 7762
+    },
+    "segment": {
+      "Womens E-Mail": 21387,
+      "Mens E-Mail": 21307,
+      "No E-Mail": 21306
+    }
+  },
+  "numeric_ranges": {
+    "recency": {
+      "min": 1.0,
+      "max": 12.0,
+      "unique": 12
+    },
+    "history": {
+      "min": 29.99,
+      "max": 3345.93,
+      "unique": 34833
+    },
+    "mens": {
+      "min": 0.0,
+      "max": 1.0,
+      "unique": 2
+    },
+    "womens": {
+      "min": 0.0,
+      "max": 1.0,
+      "unique": 2
+    },
+    "newbie": {
+      "min": 0.0,
+      "max": 1.0,
+      "unique": 2
+    },
+    "visit": {
+      "min": 0.0,
+      "max": 1.0,
+      "unique": 2
+    },
+    "conversion": {
+      "min": 0.0,
+      "max": 1.0,
+      "unique": 2
+    },
+    "spend": {
+      "min": 0.0,
+      "max": 499.0,
+      "unique": 429
+    }
+  },
+  "checks": {
+    "invalid_group": 0,
+    "invalid_recency": 0,
+    "negative_history": 0,
+    "invalid_binary": 0,
+    "history_segment_mismatch": 0,
+    "negative_spend": 0,
+    "conversion_without_visit": 0,
+    "positive_spend_without_conversion": 0,
+    "conversion_without_positive_spend": 0,
+    "positive_spend_without_visit": 0
+  }
+}
