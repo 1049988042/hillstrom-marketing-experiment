@@ -103,3 +103,5 @@ requirements.txt             Python 依赖
 ## 补充：历史消费与购买间隔的事后探索
 
 仅在固定 **44,800 条探索集**新增 history 三层与 recency 四层分析。两项 OLS+HC3 联合交互检验的 Holm p 分别为 **0.021106** 和 **0.719379**：历史消费有探索线索，但稀少购买与宽区间不足以确立定向规则。该分析是在阅读论文后确定，区别于原四阶段已固定的问题与结果；没有利用验证集挑选新规则，没有改变第三阶段原四特征的检验、冻结的 null 规则或第四阶段结论。运行 `./run_posthoc_analysis.ps1` 可重建 `data/posthoc_results.json`、[历史消费图](figures/history_effects.png)、[recency 图](figures/recency_effects.png)并执行测试；[新增分组方案](docs/posthoc_analysis_plan.md)单独保存。
+
+公开发布前已将历史作者和提交者邮箱改为 GitHub 官方 noreply 身份。报告中的旧提交哈希及其公开对应关系见[发布历史说明](docs/release_history.md)；冻结方案内容保持原 SHA256，Git 提交顺序的证据边界也在那里说明。
