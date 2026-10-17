@@ -1,0 +1,15 @@
+{
+  "stage": 3,
+  "status": "no_targeted_candidate",
+  "frozen_before_validation_evaluation": true,
+  "selection_data": "discovery only",
+  "reason": "None of the four prespecified overall treatment-by-feature interaction tests passes Holm-adjusted alpha=0.05; subgroup patterns are exploratory and sparse.",
+  "candidate_rule": null,
+  "allowed_actions": ["Mens E-Mail", "Womens E-Mail", "No E-Mail"],
+  "baseline_policies": {
+    "all_mens": {"definition": "Send Mens E-Mail to every eligible customer", "action": "Mens E-Mail"},
+    "all_womens": {"definition": "Send Womens E-Mail to every eligible customer", "action": "Womens E-Mail"},
+    "send_none": {"definition": "Send no email to every eligible customer", "action": "No E-Mail"}
+  },
+  "stage_4_instruction": "Evaluate only these frozen baseline policies unless a new targeted candidate is preregistered without using validation outcomes. Do not invent a targeted rule after looking at holdout results."
+}

@@ -1,0 +1,26 @@
+{
+  "source_sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+  "seed": 20261017,
+  "stratification": "segment",
+  "unit": "zero-based original CSV row position, excluding header",
+  "rule": "round(0.30 * each arm size) validation; remaining discovery",
+  "discovery_n": 44800,
+  "validation_n": 19200,
+  "group_counts": {
+    "Mens E-Mail": {
+      "discovery": 14915,
+      "validation": 6392
+    },
+    "Womens E-Mail": {
+      "discovery": 14971,
+      "validation": 6416
+    },
+    "No E-Mail": {
+      "discovery": 14914,
+      "validation": 6392
+    }
+  },
+  "index_file_sha256": "eb9dfa4fc8a51fecc801bbfb764c192af95531086431d5349fa80a15c7dc089e",
+  "validation_outcomes_accessed": false,
+  "qualification": "internal holdout after full-sample stage-2 summaries; not external or wholly unseen evidence"
+}
