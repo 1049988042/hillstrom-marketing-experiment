@@ -1,0 +1,403 @@
+{
+  "checks": {
+    "raw_sha256": "0e5893329d8b93cefecc571777672028290ab69865718020c78c7284f291aece",
+    "index_sha256": "eb9dfa4fc8a51fecc801bbfb764c192af95531086431d5349fa80a15c7dc089e",
+    "plan_sha256": "2b52aee5cc79b4011a1f26b2cfc3ab6997821e3d1e3fa32aedee3983d625284b"
+  },
+  "partition_note": "Internal holdout; stage-2 full sample included these rows; no new external experiment",
+  "policy_definitions": {
+    "P0": "No E-Mail",
+    "P1": "Mens E-Mail",
+    "P2": "Womens E-Mail"
+  },
+  "summary": {
+    "validation": {
+      "P0": {
+        "arm": "No E-Mail",
+        "n": 6392,
+        "mean_spend_usd": 0.5150750938673342,
+        "sd_spend_usd": 10.393120515742972,
+        "nonzero_spend_n": 30,
+        "mean_ci95_usd": [
+          0.26024076721047307,
+          0.7699094205241953
+        ]
+      },
+      "P1": {
+        "arm": "Mens E-Mail",
+        "n": 6392,
+        "mean_spend_usd": 1.406246871088861,
+        "sd_spend_usd": 19.190425610747816,
+        "nonzero_spend_n": 72,
+        "mean_ci95_usd": [
+          0.9357068459476336,
+          1.8767868962300882
+        ]
+      },
+      "P2": {
+        "arm": "Womens E-Mail",
+        "n": 6416,
+        "mean_spend_usd": 1.0577774314214465,
+        "sd_spend_usd": 13.306043231771172,
+        "nonzero_spend_n": 57,
+        "mean_ci95_usd": [
+          0.7321306482150041,
+          1.383424214627889
+        ]
+      }
+    },
+    "discovery": {
+      "P0": {
+        "arm": "No E-Mail",
+        "n": 14914,
+        "mean_spend_usd": 0.711812391041974,
+        "sd_spend_usd": 12.064061601226323,
+        "nonzero_spend_n": 92,
+        "mean_ci95_usd": [
+          0.5181791934854842,
+          0.9054455885984638
+        ]
+      },
+      "P1": {
+        "arm": "Mens E-Mail",
+        "n": 14915,
+        "mean_spend_usd": 1.4296319141803553,
+        "sd_spend_usd": 17.102486330366744,
+        "nonzero_spend_n": 195,
+        "mean_ci95_usd": [
+          1.1551391116872411,
+          1.7041247166734694
+        ]
+      },
+      "P2": {
+        "arm": "Womens E-Mail",
+        "n": 14971,
+        "mean_spend_usd": 1.0855260169661347,
+        "sd_spend_usd": 15.829007884789915,
+        "nonzero_spend_n": 132,
+        "mean_ci95_usd": [
+          0.8319480611509483,
+          1.339103972781321
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "validation": {
+      "P1 vs P0": {
+        "difference_usd": 0.8911717772215267,
+        "relative_lift_percent": 173.01783523065518,
+        "ci95_usd": [
+          0.3560919628498651,
+          1.4262515915931884
+        ],
+        "statistic": 3.264708080975084,
+        "degrees_of_freedom": 9843.073709505114,
+        "p_raw": 0.0010995126492723997,
+        "p_holm": 0.003298537947817199,
+        "bootstrap_ci95_usd": [
+          0.3720968006883604,
+          1.4204934683979968
+        ]
+      },
+      "P2 vs P0": {
+        "difference_usd": 0.5427023375541123,
+        "relative_lift_percent": 105.36373123370123,
+        "ci95_usd": [
+          0.12923419358493204,
+          0.9561704815232926
+        ],
+        "statistic": 2.5728301338804096,
+        "degrees_of_freedom": 12116.617840679719,
+        "p_raw": 0.010098860934394537,
+        "p_holm": 0.020197721868789074,
+        "bootstrap_ci95_usd": [
+          0.1159030109722566,
+          0.9701136100026836
+        ]
+      },
+      "P1 vs P2": {
+        "difference_usd": 0.3484694396674144,
+        "relative_lift_percent": 32.943550251317,
+        "ci95_usd": [
+          -0.2237189235058592,
+          0.920657802840688
+        ],
+        "statistic": 1.1937680899761642,
+        "degrees_of_freedom": 11378.664836865128,
+        "p_raw": 0.23259358417430048,
+        "p_holm": 0.23259358417430048,
+        "bootstrap_ci95_usd": [
+          -0.2061153125185317,
+          0.9170556222475725
+        ]
+      }
+    },
+    "discovery": {
+      "P1 vs P0": {
+        "difference_usd": 0.7178195231383813,
+        "relative_lift_percent": 100.84392069764533,
+        "ci95_usd": [
+          0.3819147953420334,
+          1.053724250934729
+        ],
+        "statistic": 4.188580313284677,
+        "degrees_of_freedom": 26810.646674449847,
+        "p_raw": 2.816017383218748e-05,
+        "p_holm": 8.448052149656244e-05
+      },
+      "P2 vs P0": {
+        "difference_usd": 0.3737136259241607,
+        "relative_lift_percent": 52.50170278394657,
+        "ci95_usd": [
+          0.05467143368619548,
+          0.6927558181621258
+        ],
+        "statistic": 2.2959249959456667,
+        "degrees_of_freedom": 27971.089397758493,
+        "p_raw": 0.02168753003844188,
+        "p_holm": 0.04337506007688376
+      },
+      "P1 vs P2": {
+        "difference_usd": 0.3441058972142206,
+        "relative_lift_percent": 31.69946107564879,
+        "ci95_usd": [
+          -0.02957422899433476,
+          0.717786023422776
+        ],
+        "statistic": 1.8049198078702717,
+        "degrees_of_freedom": 29689.39072810386,
+        "p_raw": 0.07109735934399873,
+        "p_holm": 0.07109735934399873
+      }
+    }
+  },
+  "economic_scenarios": {
+    "parameters_are_hypothetical": true,
+    "margins": [
+      0.2,
+      0.4,
+      0.6
+    ],
+    "costs_usd": [
+      0.05,
+      0.25,
+      0.5
+    ],
+    "break_even_cost_thresholds": {
+      "0.20": {
+        "P1": {
+          "estimate_usd": 0.17823435544430535,
+          "ci95_usd": [
+            0.07121839256997302,
+            0.2852503183186377
+          ]
+        },
+        "P2": {
+          "estimate_usd": 0.10854046751082247,
+          "ci95_usd": [
+            0.02584683871698641,
+            0.19123409630465854
+          ]
+        }
+      },
+      "0.40": {
+        "P1": {
+          "estimate_usd": 0.3564687108886107,
+          "ci95_usd": [
+            0.14243678513994604,
+            0.5705006366372753
+          ]
+        },
+        "P2": {
+          "estimate_usd": 0.21708093502164494,
+          "ci95_usd": [
+            0.05169367743397282,
+            0.3824681926093171
+          ]
+        }
+      },
+      "0.60": {
+        "P1": {
+          "estimate_usd": 0.534703066332916,
+          "ci95_usd": [
+            0.21365517770991907,
+            0.855750954955913
+          ]
+        },
+        "P2": {
+          "estimate_usd": 0.3256214025324674,
+          "ci95_usd": [
+            0.07754051615095922,
+            0.5737022889139756
+          ]
+        }
+      }
+    },
+    "same_cost_P1_minus_P2_contribution": {
+      "0.20": {
+        "P1_minus_P2_usd": 0.06969388793348288,
+        "ci95_usd": [
+          -0.044743784701171845,
+          0.18413156056813762
+        ]
+      },
+      "0.40": {
+        "P1_minus_P2_usd": 0.13938777586696577,
+        "ci95_usd": [
+          -0.08948756940234369,
+          0.36826312113627524
+        ]
+      },
+      "0.60": {
+        "P1_minus_P2_usd": 0.20908166380044862,
+        "ci95_usd": [
+          -0.13423135410351553,
+          0.5523946817044127
+        ]
+      }
+    },
+    "scenario_rows": [
+      {
+        "assumed_margin": 0.2,
+        "assumed_cost_usd": 0.05,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.12823435544430534,
+          "P2": 0.058540467510822466
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 12823.435544430533,
+          "P2": 5854.046751082246
+        }
+      },
+      {
+        "assumed_margin": 0.2,
+        "assumed_cost_usd": 0.25,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": -0.07176564455569465,
+          "P2": -0.14145953248917753
+        },
+        "point_estimate_choice": "P0",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": -7176.564455569464,
+          "P2": -14145.953248917753
+        }
+      },
+      {
+        "assumed_margin": 0.2,
+        "assumed_cost_usd": 0.5,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": -0.3217656445556947,
+          "P2": -0.39145953248917753
+        },
+        "point_estimate_choice": "P0",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": -32176.564455569467,
+          "P2": -39145.95324891775
+        }
+      },
+      {
+        "assumed_margin": 0.4,
+        "assumed_cost_usd": 0.05,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.3064687108886107,
+          "P2": 0.16708093502164495
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 30646.871088861073,
+          "P2": 16708.093502164495
+        }
+      },
+      {
+        "assumed_margin": 0.4,
+        "assumed_cost_usd": 0.25,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.10646871088861071,
+          "P2": -0.03291906497835506
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 10646.871088861071,
+          "P2": -3291.9064978355063
+        }
+      },
+      {
+        "assumed_margin": 0.4,
+        "assumed_cost_usd": 0.5,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": -0.1435312891113893,
+          "P2": -0.28291906497835506
+        },
+        "point_estimate_choice": "P0",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": -14353.128911138929,
+          "P2": -28291.906497835505
+        }
+      },
+      {
+        "assumed_margin": 0.6,
+        "assumed_cost_usd": 0.05,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.484703066332916,
+          "P2": 0.2756214025324674
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 48470.3066332916,
+          "P2": 27562.140253246744
+        }
+      },
+      {
+        "assumed_margin": 0.6,
+        "assumed_cost_usd": 0.25,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.284703066332916,
+          "P2": 0.07562140253246741
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 28470.3066332916,
+          "P2": 7562.140253246741
+        }
+      },
+      {
+        "assumed_margin": 0.6,
+        "assumed_cost_usd": 0.5,
+        "incremental_contribution_usd_per_customer": {
+          "P0": 0.0,
+          "P1": 0.03470306633291598,
+          "P2": -0.1743785974675326
+        },
+        "point_estimate_choice": "P1",
+        "illustrative_100000_customer_contribution_usd": {
+          "P0": 0.0,
+          "P1": 3470.306633291598,
+          "P2": -17437.85974675326
+        }
+      }
+    ],
+    "illustrative_customer_count": 100000
+  },
+  "full_row_duplicates_retained": {
+    "validation": 1393,
+    "discovery": 4320
+  }
+}
